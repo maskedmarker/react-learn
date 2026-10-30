@@ -16,6 +16,7 @@ const LESSONS = [
 export default function App() {
   // activeId 记录当前选中的知识点，默认显示第一个
   const [activeId, setActiveId] = useState(LESSONS[0].id)
+  console.log('activeId : ', activeId);
 
   // 根据 activeId 找到对应的页面组件
   const activeLesson = LESSONS.find((l) => l.id === activeId)
