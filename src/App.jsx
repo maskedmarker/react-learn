@@ -14,6 +14,9 @@ const LESSONS = [
 ]
 
 export default function App() {
+  // 当前组件如果有状态变化，整个组件会重新渲染，函数体会被重新执行
+  console.log("App component rendered");
+
   // activeId 记录当前选中的知识点，默认显示第一个
   const [activeId, setActiveId] = useState(LESSONS[0].id)
   console.log('activeId : ', activeId);
