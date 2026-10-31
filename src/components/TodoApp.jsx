@@ -5,6 +5,9 @@ import TodoItem from './TodoItem.jsx'
 let nextId = 1
 
 export default function TodoApp() {
+  console.log("TodoApp component rendered");
+
+
   // todos 是数组，每一项 { id, text, done }
   // 用函数式初始化，避免每次渲染都重新执行 nextId++
   const [todos, setTodos] = useState(() => [

@@ -1,6 +1,9 @@
 // 子组件：通过 props（属性）接收父组件传入的数据
 // props 是只读的 —— 永远不要修改传入的 props
 function UserCard({ name, role = '学生', avatar }) {
+  console.log("UserCard component rendered");
+
+
   return (
     <div className="card user-card">
       <span className="avatar">{avatar}</span>
@@ -13,6 +16,9 @@ function UserCard({ name, role = '学生', avatar }) {
 }
 
 export default function Greeting() {
+  console.log("Greeting component rendered");
+
+
   return (
     <section>
       <h2>组件与 Props</h2>

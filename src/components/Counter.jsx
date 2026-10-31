@@ -1,6 +1,9 @@
 import { useState } from 'react'
 
 export default function Counter() {
+  console.log("Counter component rendered");
+  
+
   // useState(初始值) 返回一个数组：[当前状态值, 更新函数]
   // 调用更新函数会触发组件重新渲染，界面随之更新
   const [count, setCount] = useState(0)

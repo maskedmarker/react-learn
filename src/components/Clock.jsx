@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 
 export default function Clock() {
+  console.log("Clock component rendered");
+
+
   const [now, setNow] = useState(() => new Date())
 
   // useEffect：组件渲染后执行副作用（定时器、请求数据、订阅等）
