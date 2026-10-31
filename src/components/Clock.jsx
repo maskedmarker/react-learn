@@ -11,8 +11,17 @@ export default function Clock() {
     // 副作用：每秒更新一次时间
     const timer = setInterval(() => setNow(new Date()), 1000)
     // 返回清理函数：组件卸载时会调用，避免内存泄漏
-    return () => clearInterval(timer)
+    return () => {
+      console.log("Clock组件卸载时,执行清理回调函数");
+      clearInterval(timer);
+    }
   }, []) // 空数组 = 只在首次渲染后执行一次
+
+  useEffect(() => {
+    return () => {
+      console.log("now变化时,执行清理回调函数");
+    }
+  }, [now])
 
   const time = now.toLocaleTimeString()
   const date = now.toLocaleDateString()
