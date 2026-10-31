@@ -17,6 +17,8 @@ export default function App() {
   // 当前组件如果有状态变化，整个组件会重新渲染，函数体会被重新执行
   console.log("App component rendered");
 
+  // useState(初始值) 返回一个数组：[当前状态值, 更新函数],调用更新函数会触发组件重新渲染，界面随之更新
+  // useState在第一次渲染时使用初始值，之后的渲染会忽略初始值，直接使用当前状态值
   // activeId 记录当前选中的知识点，默认显示第一个
   const [activeId, setActiveId] = useState(LESSONS[0].id)
   console.log('activeId : ', activeId);
